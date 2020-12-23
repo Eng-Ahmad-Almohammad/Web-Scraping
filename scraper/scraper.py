@@ -26,8 +26,7 @@ def get_citations_needed_report(url):
         if p.findChildren('span' , recursive=True):
             final_result.append(p.text)
 
-    for i in final_result:
-        print(i)
+    return final_result
 
 print(get_citations_needed_count("https://en.wikipedia.org/wiki/History_of_Mexico"))
-get_citations_needed_report("https://en.wikipedia.org/wiki/History_of_Mexico")
+print(get_citations_needed_report("https://en.wikipedia.org/wiki/History_of_Mexico"))
